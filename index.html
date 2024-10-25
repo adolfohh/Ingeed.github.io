@@ -10,8 +10,9 @@
 <body>
     <header>
         <a href="https://wa.me/5219611108939" class="logo">Ingeed</a>
-        <nav>
-            <a href="https://wa.me/5219611108939" class="active"> Home</a>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- Icono del menú móvil -->
+        <nav id="nav">
+            <a href="https://wa.me/5219611108939" class="active">Home</a>
             <a href="#">Services</a>
             <a href="#">Skills</a>
             <a href="#">Education</a>
@@ -19,6 +20,7 @@
             <a href="#">Contact</a>
         </nav>
     </header>
+
     <section class="home">
         <div class="home-img">
             <img src="img/Imagen de WhatsApp 2024-10-24 a las 20.02.50_47c29355.jpg" alt="Logo" class="corner-logo">
@@ -45,18 +47,24 @@
     </div>
 
     <script>
+        // Función para cerrar el banner de promoción
         const closeButton = document.querySelector('.close-btn');
         const promoBanner = document.querySelector('.promo-banner');
 
         closeButton.addEventListener('click', () => {
             promoBanner.classList.add('hide');
         });
-    </script>
-    <script>
+
+        // Función para alternar el menú en dispositivos móviles
+        function toggleMenu() {
+            document.getElementById("nav").classList.toggle("active");
+        }
+
+        // Efecto de fade-in al cargar la página
         window.onload = function() {
-            document.body.classList.add('fade-in'); // Agrega la clase al cargar la página
+            document.body.classList.add('fade-in');
         };
     </script>
-    
 </body>
 </html>
+
