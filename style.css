@@ -447,7 +447,7 @@ img {
     /* Alinear el letrero de promoción y el botón */
     .promo-banner {
       position: absolute;
-      bottom: 50px; /* Eleva el letrero de promoción para que no choque con el botón */
+      bottom: 10px; /* Eleva el letrero de promoción para que no choque con el botón */
       right: 10px;
     }
   
