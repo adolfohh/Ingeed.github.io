@@ -334,7 +334,7 @@ span {
 
 .corner-logo {
     position: fixed;
-    top: 20px; /* Ajusta la posición vertical */
+    top:-10px; /* Ajusta la posición vertical */
     left: 1200px; /* Mueve a la izquierda */
     max-width: 70px; /* Tamaño máximo del ancho */
     max-height: 70px; /* Tamaño máximo de la altura */
@@ -371,6 +371,68 @@ span {
         opacity: 1; /* Se vuelve completamente visible */
         transform: translateY(0); /* Se coloca en su posición original */
     }
+}
+
+/* Agregar icono de menú para móvil */
+header .menu-toggle {
+    display: none;
+    font-size: 3rem;
+    color: #b74b4b;
+    cursor: pointer;
+    z-index: 101;
+}
+
+/* Ajuste de la navegación en dispositivos móviles */
+@media (max-width: 995px) {
+    nav {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #161616;
+        border-left: 3px solid #b74b4b;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+    }
+
+    nav.active {
+        transform: translateX(0);
+    }
+
+    header .menu-toggle {
+        display: block;
+    }
+}
+
+/* Estilos para el botón de menú */
+.menu-toggle {
+    cursor: pointer;
+    z-index: 200;
+}
+
+/* Ajustes en el tamaño de los elementos de la sección home */
+@media (max-width: 600px) {
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 2rem;
+    }
+
+    .home-img img {
+        width: 60vw;
+    }
+}
+
+/* Corrección de tamaños de imagenes */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 
