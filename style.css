@@ -455,7 +455,7 @@ img {
 
   /* Separar el botón "Start" del banner */
   .start-button {
-    margin-bottom: 150px; /* Añadir más espacio inferior para evitar el choque */
+    margin-bottom: 300px; /* Añadir más espacio inferior para evitar el choque */
     z-index: 999; /* Asegura que el botón no se solape con el banner */
   }
 }
