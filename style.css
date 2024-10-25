@@ -437,22 +437,27 @@ img {
 
 /* Para dispositivos móviles */
 @media only screen and (max-width: 768px) {
-    /* Ajustar el logo */
-    .logo {
-      display: block; /* Asegúrate de que se muestre */
-      margin-top: 10px; /* Ajusta el espacio superior si es necesario */
-      width: 100px; /* Ajusta el tamaño según sea necesario */
-    }
-  
-    /* Alinear el letrero de promoción y el botón */
-    .promo-banner {
-      position: absolute;
-      bottom: 50px; /* Eleva el letrero de promoción para que no choque con el botón */
-      right: 10px;
-    }
-  
-    .start-button {
-      margin-bottom: 100px; /* Añade espacio para que no choquen el botón y la promoción */
-    }
+  /* Asegurarse de que el logo se muestre */
+  .logo {
+    display: block !important; /* Sobreescribe cualquier display: none */
+    margin-top: 10px;
+    width: auto; /* Ajusta el ancho automáticamente según el espacio disponible */
+    height: auto; /* Asegura que el logo no desaparezca por la altura */
   }
+
+  /* Ajustar la posición del banner de promoción */
+  .promo-banner {
+    position: fixed; /* Fijar el banner para que no interfiera con otros elementos */
+    bottom: 80px; /* Eleva el banner para que no choque con el botón */
+    right: 20px;
+    z-index: 1000; /* Asegura que el banner esté por encima de otros elementos */
+  }
+
+  /* Separar el botón "Start" del banner */
+  .start-button {
+    margin-bottom: 150px; /* Añadir más espacio inferior para evitar el choque */
+    z-index: 999; /* Asegura que el botón no se solape con el banner */
+  }
+}
+
   
