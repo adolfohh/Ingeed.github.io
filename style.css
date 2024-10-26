@@ -455,4 +455,37 @@ img {
       margin-bottom: 50px; /* Añade espacio para que no choquen el botón y la promoción */
     }
   }
+
+ 
+
+.home-img img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0.8;
+}
+
+.home-img img:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño de la imagen */
+    opacity: 1; /* Vuelve la imagen completamente visible */
+    content: url('img/Imagen\ de\ WhatsApp\ 2024-10-24\ a\ las\ 18.28.56_ba681063.jpg'); /* Cambia la imagen al pasar el ratón por encima */
+}
+
+/* Efecto para imágenes con la clase 'hover-effect' */
+.hover-effect {
+    transition: transform 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease;
+    /* Agrega un leve sombreado desde el inicio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hover-effect:hover {
+    /* Escala y añade un filtro y sombra para resaltar */
+    transform: scale(1.05) rotate(2deg);
+    filter: brightness(1.1) saturate(1.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Asegura que el logo quede sin efectos */
+.corner-logo {
+    transition: none; /* Desactiva cualquier animación */
+}
+
   
